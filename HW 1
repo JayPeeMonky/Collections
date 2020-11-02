@@ -1,0 +1,15 @@
+package com.company;
+import ibadts.*;
+public class Main {
+
+    public static void main(String[] args) {
+        IBCollection<String> names = new IBCollection<>();
+        names.add(new String[] {"John", "Marie"});
+        for (int count = 0; count < 3; count++) {
+            names.resetNext(); //go to the back of the collection
+            while (names.hasNext()) {
+                System.out.println(names.getNext());
+            }
+        }
+    }
+}
