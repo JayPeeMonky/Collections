@@ -1,0 +1,30 @@
+package com.company;
+import ibadts.*;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        IBCollection<Integer> numbers = new IBCollection<>();
+        System.out.println("Input integers");
+        Scanner scanner = new Scanner(System.in);
+        boolean flag = true;
+        int total = 0;
+        int counter = 0;
+        while (flag) {
+            int number = scanner.nextInt();
+            numbers.addItem(number);
+            if (number < 0) {
+                flag = false;
+            }
+            else {
+                counter++;
+                total = total + number;
+            }
+            int mean = total / counter;
+            if (number < )
+        }
+        
+    }
+}
