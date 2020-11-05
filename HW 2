@@ -1,0 +1,34 @@
+package com.company;
+import ibadts.*;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        boolean flag = true;
+        int t = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input number");
+        IBCollection<Integer> numbers = new IBCollection<>();
+        int number;
+
+        while (flag == true) {
+            number = scan.nextInt();
+            if (number <= 0) {
+                flag = false;
+            }
+            else {
+                numbers.addItem(number);
+                t = number;
+            }
+        }
+
+        while (numbers.hasNext()) {
+            number = numbers.getNext();
+            if (number > t) {
+                System.out.println(number);
+            }
+        }
+    }
+}
